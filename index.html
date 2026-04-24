@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <meta name="description" content="相続の悩みをタスケくんと一緒に整理。何から始めればいいか、期限はいつか、費用はどれくらいか。初めての相続でも安心のナビゲーター。">
+  <meta name="theme-color" content="#2C3E50">
+  <title>タスケくん - 相続事前相談ナビ</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="manifest" href="manifest.json">
+</head>
+<body>
+  <!-- ===== ウェルカム画面 ===== -->
+  <div id="screen-welcome" class="screen active">
+    <div class="welcome-container">
+      <div class="welcome-mascot" id="welcome-mascot">
+        <div class="mascot-wave">
+          <img src="assets/tasuke-icon.png" alt="タスケくん" class="mascot-img" id="mascot-img">
+        </div>
+        <div class="welcome-sparkles">
+          <span class="sparkle s1">✨</span>
+          <span class="sparkle s2">✨</span>
+          <span class="sparkle s3">✨</span>
+        </div>
+      </div>
+      <h1 class="welcome-title">タスケくん</h1>
+      <p class="welcome-subtitle">相続事前相談ナビ</p>
+      <p class="welcome-sandbox">
+        🐻 このアプリは、個人情報を一切入れずに<br>
+        何度でもやり直せる「練習帳」だよ。<br>
+        間違えても大丈夫だから、<br>
+        気になるボタンは安心して全部押してみてね！
+      </p>
+      <button class="btn-primary btn-start" id="btn-start">はじめる</button>
+    </div>
+  </div>
+
+  <!-- ===== 免責事項画面 ===== -->
+  <div id="screen-disclaimer" class="screen">
+    <div class="disclaimer-container">
+      <div class="disclaimer-icon">ℹ️</div>
+      <h2 class="disclaimer-title">タスケくんについて</h2>
+      <div class="disclaimer-text">
+        <p>タスケくんは、相続について「まず何を知っておくべきか」「どう進めればいいか」を一緒に確認していくナビゲーターです。</p>
+        <p>実際の書類作成や申告が必要になった時は、あなたの状況に合った専門家の選び方もタスケくんがお伝えします。</p>
+      </div>
+      <button class="btn-primary" id="btn-disclaimer-ok">わかりました、始めましょう！</button>
+    </div>
+  </div>
+
+  <!-- ===== メインチャット画面 ===== -->
+  <div id="screen-chat" class="screen">
+    <!-- ヘッダー -->
+    <header class="chat-header">
+      <div class="header-left">
+        <button class="btn-icon btn-back" id="btn-back" title="前の質問に戻る" style="display:none;">
+          <span>←</span>
+        </button>
+        <img src="assets/tasuke-icon.png" alt="" class="header-avatar">
+        <span class="header-title">🐻 タスケくん</span>
+      </div>
+      <div class="header-right">
+        <button class="btn-icon btn-font-size" id="btn-font-size" title="文字サイズ変更">
+          <span>文字サイズ</span>
+        </button>
+        <button class="btn-icon btn-info" id="btn-info" title="タスケくんについて">
+          <span>ℹ️</span>
+        </button>
+      </div>
+    </header>
+
+    <!-- ステータス切替リンク -->
+    <div class="status-switch" id="status-switch" style="display:none;">
+      <button class="status-switch-btn" id="btn-status-switch">※状況が変わった場合はこちら</button>
+    </div>
+
+    <!-- チャットエリア -->
+    <main class="chat-area" id="chat-area">
+      <div class="chat-messages" id="chat-messages">
+        <!-- メッセージはJSで動的に追加 -->
+      </div>
+    </main>
+
+    <!-- 選択肢エリア -->
+    <div class="choices-area" id="choices-area" style="display:none;">
+      <!-- 選択肢ボタンはJSで動的に追加 -->
+    </div>
+
+    <!-- テキスト入力エリア（名前入力用） -->
+    <div class="input-area" id="input-area" style="display:none;">
+      <input type="text" class="input-field" id="input-name" placeholder="例）ヒロ" maxlength="20">
+      <button class="btn-send" id="btn-send">次へ</button>
+    </div>
+  </div>
+
+  <!-- ===== レポート画面 ===== -->
+  <div id="screen-report" class="screen">
+    <header class="chat-header">
+      <div class="header-left">
+        <button class="btn-icon btn-back" id="btn-report-back">
+          <span>←</span>
+        </button>
+        <span class="header-title">📋 確認まとめレポート</span>
+      </div>
+    </header>
+    <div class="report-container" id="report-container">
+      <!-- レポート内容はJSで動的に生成 -->
+    </div>
+    <div class="report-actions">
+      <button class="btn-secondary" id="btn-save-report">💾 画像として保存</button>
+      <button class="btn-secondary" id="btn-share-report">📤 家族に共有する</button>
+    </div>
+  </div>
+
+  <!-- ===== 文字サイズ変更モーダル ===== -->
+  <div class="modal-overlay" id="modal-font" style="display:none;">
+    <div class="modal-content">
+      <h3>文字サイズ</h3>
+      <div class="font-size-options">
+        <button class="font-option" data-size="small">小</button>
+        <button class="font-option active" data-size="medium">中</button>
+        <button class="font-option" data-size="large">大</button>
+        <button class="font-option" data-size="xlarge">特大</button>
+      </div>
+      <p class="font-preview" id="font-preview">この大きさで文字が表示されます</p>
+      <button class="btn-primary" id="btn-font-close">決定</button>
+    </div>
+  </div>
+
+  <script src="scenarios.js"></script>
+  <script src="app.js"></script>
+  <script>if('serviceWorker' in navigator){navigator.serviceWorker.register('sw.js');}</script>
+</body>
+</html>

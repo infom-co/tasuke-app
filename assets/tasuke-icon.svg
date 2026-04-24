@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#E8F5E9"/>
+      <stop offset="100%" style="stop-color:#A5D6A7"/>
+    </linearGradient>
+    <linearGradient id="skin" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#FDEBD0"/>
+      <stop offset="100%" style="stop-color:#F5CBA7"/>
+    </linearGradient>
+  </defs>
+  <!-- Background circle -->
+  <circle cx="100" cy="100" r="96" fill="url(#bg)" stroke="#81C784" stroke-width="4"/>
+  <!-- Body -->
+  <ellipse cx="100" cy="170" rx="45" ry="30" fill="#4A7C59"/>
+  <!-- Book -->
+  <rect x="60" y="130" width="35" height="45" rx="3" fill="#8D6E63" transform="rotate(-10 77 152)"/>
+  <rect x="63" y="133" width="29" height="39" rx="2" fill="#EFEBE9" transform="rotate(-10 77 152)"/>
+  <text x="70" y="158" font-size="7" fill="#5D4037" font-weight="bold" transform="rotate(-10 77 152)">六法</text>
+  <text x="70" y="167" font-size="7" fill="#5D4037" font-weight="bold" transform="rotate(-10 77 152)">全書</text>
+  <!-- Face -->
+  <circle cx="100" cy="85" r="45" fill="url(#skin)"/>
+  <!-- Hair -->
+  <path d="M55 75 Q60 30 100 25 Q140 30 145 75 Q145 55 130 45 Q115 35 100 33 Q85 35 70 45 Q55 55 55 75Z" fill="#2C1810"/>
+  <path d="M58 80 Q55 60 65 50" stroke="#2C1810" stroke-width="8" fill="none" stroke-linecap="round"/>
+  <path d="M142 80 Q145 60 135 50" stroke="#2C1810" stroke-width="8" fill="none" stroke-linecap="round"/>
+  <!-- Eyes -->
+  <ellipse cx="82" cy="82" rx="6" ry="7" fill="#2C1810"/>
+  <ellipse cx="118" cy="82" rx="6" ry="7" fill="#2C1810"/>
+  <circle cx="84" cy="80" r="2" fill="white"/>
+  <circle cx="120" cy="80" r="2" fill="white"/>
+  <!-- Cheeks -->
+  <circle cx="70" cy="95" r="8" fill="#FFCDD2" opacity="0.5"/>
+  <circle cx="130" cy="95" r="8" fill="#FFCDD2" opacity="0.5"/>
+  <!-- Smile -->
+  <path d="M88 98 Q100 112 112 98" stroke="#2C1810" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+  <!-- Waving hand -->
+  <circle cx="148" cy="125" r="10" fill="url(#skin)"/>
+  <rect x="140" y="125" width="16" height="25" rx="8" fill="url(#skin)" transform="rotate(15 148 137)"/>
+  <!-- Fingers -->
+  <rect x="141" y="117" width="4" height="10" rx="2" fill="url(#skin)" transform="rotate(-10 143 122)"/>
+  <rect x="147" y="115" width="4" height="11" rx="2" fill="url(#skin)" transform="rotate(0 149 120)"/>
+  <rect x="153" y="117" width="4" height="10" rx="2" fill="url(#skin)" transform="rotate(10 155 122)"/>
+</svg>

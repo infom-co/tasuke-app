@@ -1,0 +1,22 @@
+{
+  "name": "タスケくん - 相続事前相談ナビ",
+  "short_name": "タスケくん",
+  "description": "相続の悩みをタスケくんと一緒に整理。初めての相続でも安心のナビゲーター。",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#E8F5E9",
+  "theme_color": "#4A7C59",
+  "orientation": "portrait",
+  "icons": [
+    {
+      "src": "assets/tasuke-icon.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "assets/tasuke-icon.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
