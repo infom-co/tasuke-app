@@ -105,34 +105,30 @@ body {
   animation: fadeInUp 0.8s cubic-bezier(0.2, 0.8, 0.2, 1);
 }
 
-/* ヘッダー周り：コンパクトかつリッチに */
-.welcome-header {
+/* アプリヒーローエリア */
+.app-hero {
   display: flex;
+  flex-direction: column;
   align-items: center;
-  gap: 1rem;
-  background: rgba(255, 255, 255, 0.7);
-  padding: 0.8rem 1.2rem;
-  border-radius: 100px;
-  box-shadow: 0 4px 20px rgba(0,0,0,0.03);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-  border: 1px solid rgba(255,255,255,0.8);
-}
-
-.mascot-wrapper {
+  margin-bottom: -10px; /* カードとの距離をギュッと詰める */
+  z-index: 2;
   position: relative;
-  width: 65px;
-  height: 65px;
-  flex-shrink: 0;
 }
 
-.mascot-img-premium {
+.hero-mascot-wrapper {
+  position: relative;
+  width: 90px;
+  height: 90px;
+  margin-bottom: 0.8rem;
+}
+
+.hero-mascot {
   width: 100%;
   height: 100%;
   border-radius: 50%;
   object-fit: cover;
-  border: 2px solid white;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+  border: 3px solid white;
+  box-shadow: 0 12px 28px rgba(0,0,0,0.12);
   position: relative;
   z-index: 2;
 }
@@ -152,31 +148,16 @@ body {
   100% { transform: scale(1.4); opacity: 0; }
 }
 
-.title-wrapper {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: center;
-}
-
-.eyebrow-badge {
-  font-size: 0.75rem;
-  font-weight: 700;
-  color: #1b5e20;
-  background: #e8f5e9;
-  padding: 0.2rem 0.6rem;
-  border-radius: 20px;
-  margin-bottom: 0.2rem;
-  letter-spacing: 0.05em;
-}
-
-.main-title {
-  font-size: 1.8rem;
+.hero-title {
+  font-size: 2rem;
   font-weight: 900;
   color: #1A1A1A;
   margin: 0;
-  letter-spacing: 0.05em;
-  line-height: 1.1;
+  letter-spacing: 0.08em;
+  background: linear-gradient(135deg, #1A1A1A 0%, #2e7d32 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  filter: drop-shadow(0px 2px 4px rgba(0,0,0,0.05));
 }
 
 /* メッセージカード：大きく、読みやすく */
@@ -186,6 +167,29 @@ body {
   padding: 1.8rem 1.5rem;
   box-shadow: 0 12px 32px rgba(0, 0, 0, 0.04), 0 2px 8px rgba(0, 0, 0, 0.02);
   text-align: left;
+  position: relative;
+}
+
+/* メッセージカード内バッジ（カード上部にめり込むデザイン） */
+.card-badge-wrapper {
+  text-align: center;
+  margin-top: -42px; /* カードの上部にはみ出させる */
+  margin-bottom: 1.2rem;
+  position: relative;
+  z-index: 3;
+}
+
+.eyebrow-badge {
+  font-size: 0.75rem;
+  font-weight: 800;
+  color: #FFFFFF;
+  background: #06C755;
+  padding: 0.4rem 1.2rem;
+  border-radius: 20px;
+  letter-spacing: 0.05em;
+  box-shadow: 0 4px 12px rgba(6, 199, 85, 0.3);
+  display: inline-block;
+  border: 2px solid white;
 }
 
 .message-card p {
@@ -230,11 +234,12 @@ body {
 }
 
 .highlight-premium {
-  display: inline-block;
   color: #059669;
   font-weight: 800;
-  background: linear-gradient(transparent 70%, #A7F3D0 70%);
-  padding: 0 0.1rem;
+  background: linear-gradient(transparent 60%, #A7F3D0 60%);
+  padding: 0 0.2rem;
+  box-decoration-break: clone;
+  -webkit-box-decoration-break: clone;
 }
 
 /* アクションエリア */
@@ -242,13 +247,6 @@ body {
   text-align: center;
   margin-top: 0.5rem;
   padding-bottom: 2rem;
-}
-
-.action-text {
-  font-size: 0.95rem;
-  font-weight: 700;
-  color: #64748B;
-  margin-bottom: 0.8rem;
 }
 
 /* 最強のボタン（LINE基準） */

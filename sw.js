@@ -1,5 +1,5 @@
 // タスケくん Service Worker - 完全オフライン動作保証
-const CACHE_NAME = 'tasuke-v14';
+const CACHE_NAME = 'tasuke-v16';
 const ASSETS = [
   './',
   './index.html',
