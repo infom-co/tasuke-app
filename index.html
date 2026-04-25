@@ -16,46 +16,51 @@
 
 <body>
   <!-- ===== ウェルカム画面 ===== -->
-  <div id="screen-welcome" class="screen active premium-welcome">
-    <!-- プレミアムメッシュ背景 + 動的オーラ -->
-    <div class="mesh-bg"></div>
-    <div class="ambient-glow g1"></div>
-    <div class="ambient-glow g2"></div>
+  <div id="screen-welcome" class="screen active ultimate-fintech-welcome">
+    <!-- ダイナミック・プレミアム背景 -->
+    <div class="fintech-bg">
+      <div class="glow-orb orb-top"></div>
+      <div class="glow-orb orb-bottom"></div>
+    </div>
     
     <div class="welcome-container">
       
-      <!-- 究極のグラスモーフィズム・ヘッダー（水平配置の復権と進化） -->
-      <div class="glass-header">
-        <div class="header-mascot">
-          <img src="assets/tasuke-icon.png" alt="タスケくん" class="mascot-img-ultra">
-          <div class="halo-ring"></div>
+      <!-- 信頼を構築するアプリヒーローエリア（完全中央配置・洗練極限） -->
+      <div class="app-hero-premium">
+        <div class="mascot-showcase">
+          <div class="mascot-backdrop"></div>
+          <img src="assets/tasuke-icon.png" alt="タスケくん" class="mascot-img-fintech">
         </div>
-        <div class="header-text-group">
-          <span class="eyebrow-ultra">はじめての相続相談</span>
-          <h1 class="title-ultra">タスケくん</h1>
+        <div class="title-group-fintech">
+          <span class="subtitle-fintech">はじめての相続相談ナビ</span>
+          <h1 class="title-fintech">タスケくん</h1>
         </div>
       </div>
 
-      <!-- メッセージエリア（高品位カード・文字サイズ大幅アップ） -->
-      <div class="message-card-ultra">
-        <p class="greeting-ultra">こんにちは！タスケくんだよ。</p>
-        <p>相続のことって、よく分からないし、専門家に相談するのもハードルが高いよね。</p>
-        <p>ここでは、よくある悩みや疑問について、僕が分かりやすくお答えするよ！</p>
+      <!-- 価値訴求カード（マーケティング導線に特化） -->
+      <div class="value-card">
+        <p class="lead-text">相続の手続きや税金のこと、誰に相談すればいいか迷っていませんか？</p>
+        <p class="sub-text">ここでは、よくある悩みや疑問について<br>チャット形式で分かりやすくお答えします。</p>
         
-        <div class="feature-box-ultra">
-          <div class="feature-icon">✨</div>
-          <p>『うちの場合は？』と思ったら、<br><span class="highlight-ultra">上位版の「LINEタスケくん」に切り替えて詳しい相談</span>ができるからね。</p>
+        <!-- アップセル（最重要訴求ポイント） -->
+        <div class="upsell-box">
+          <p class="upsell-catch">『うちの場合はどうなるの？』と思ったら</p>
+          <p class="upsell-highlight">上位版<span class="emerald">「LINEタスケくん」</span>へ切り替えて<br>専門的な詳しい相談が可能です。</p>
         </div>
       </div>
 
-      <!-- アクションエリア（最高到達点のボタン） -->
-      <div class="action-area-ultra">
-        <button class="btn-ultra" id="btn-start">
-          <span class="btn-text">相談をはじめる</span>
-          <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
-            <polyline points="9 18 15 12 9 6"></polyline>
+      <!-- アクションエリア（迷わせないシングルCTA） -->
+      <div class="action-area">
+        <button class="btn-fintech" id="btn-start">
+          <span class="btn-text">さっそく相談をはじめる</span>
+          <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M5 12h14M12 5l7 7-7 7"/>
           </svg>
         </button>
+        <p class="security-badge">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          完全無料・登録不要ですぐに使えます
+        </p>
       </div>
     </div>
   </div>
