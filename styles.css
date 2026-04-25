@@ -69,10 +69,12 @@ body {
   overflow: hidden;
 }
 .screen.active {
+  display: flex;
+}
+
 /* ===== 限界突破の最高峰プレミアムデザイン ===== */
 .premium-welcome {
   background: #F8FAF9;
-  position: relative;
   overflow-y: auto;
   overflow-x: hidden;
   align-items: center;
