@@ -69,226 +69,248 @@ body {
   overflow: hidden;
 }
 .screen.active {
-  display: flex;
-}
-
-/* ===== Ultimate Premium Welcome Screen ===== */
+/* ===== 限界突破の最高峰プレミアムデザイン ===== */
 .premium-welcome {
-  background: #F4F7F6;
+  background: #F8FAF9;
   position: relative;
   overflow-y: auto;
   overflow-x: hidden;
   align-items: center;
-  justify-content: flex-start;
+  justify-content: center;
   padding: 0;
 }
 
-/* 圧倒的に美しいメッシュグラデーション背景 */
+/* メッシュ背景とオーラ */
 .mesh-bg {
   position: absolute;
-  top: 0; left: 0; right: 0; bottom: 0;
-  background: radial-gradient(at 0% 0%, hsla(145, 50%, 90%, 1) 0px, transparent 50%),
-              radial-gradient(at 100% 0%, hsla(200, 50%, 92%, 1) 0px, transparent 50%),
-              radial-gradient(at 100% 100%, hsla(145, 40%, 88%, 1) 0px, transparent 50%);
+  inset: 0;
+  background: radial-gradient(at 10% 0%, hsla(140, 40%, 94%, 1) 0px, transparent 50%),
+              radial-gradient(at 90% 10%, hsla(200, 30%, 94%, 1) 0px, transparent 50%),
+              radial-gradient(at 50% 100%, hsla(150, 40%, 92%, 1) 0px, transparent 50%);
   z-index: 0;
-  pointer-events: none;
+}
+.ambient-glow {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(60px);
+  z-index: 0;
+  opacity: 0.6;
+}
+.ambient-glow.g1 {
+  width: 300px; height: 300px; background: #c8e6c9;
+  top: -50px; left: -50px; animation: floatGlow 15s infinite alternate;
+}
+.ambient-glow.g2 {
+  width: 250px; height: 250px; background: #bbdefb;
+  bottom: 10%; right: -50px; animation: floatGlow 20s infinite alternate-reverse;
+}
+@keyframes floatGlow {
+  0% { transform: translate(0,0) scale(1); }
+  100% { transform: translate(30px, 40px) scale(1.2); }
 }
 
 .welcome-container {
   z-index: 1;
   width: 92%;
   max-width: 480px;
-  margin: 4vh auto;
+  margin: auto 0;
   display: flex;
   flex-direction: column;
-  gap: 1.2rem;
+  gap: 1.5rem;
   animation: fadeInUp 0.8s cubic-bezier(0.2, 0.8, 0.2, 1);
 }
 
-/* アプリヒーローエリア */
-.app-hero {
+/* ヘッダー（グラスモーフィズム極・横並び） */
+.glass-header {
   display: flex;
-  flex-direction: column;
   align-items: center;
-  margin-bottom: -10px; /* カードとの距離をギュッと詰める */
-  z-index: 2;
-  position: relative;
+  gap: 1.2rem;
+  background: rgba(255, 255, 255, 0.65);
+  padding: 0.8rem 1.5rem;
+  border-radius: 100px;
+  box-shadow: 
+    0 8px 32px rgba(0, 0, 0, 0.04),
+    inset 0 2px 0 rgba(255, 255, 255, 1);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.8);
 }
 
-.hero-mascot-wrapper {
+.header-mascot {
   position: relative;
-  width: 90px;
-  height: 90px;
-  margin-bottom: 0.8rem;
+  width: 70px;
+  height: 70px;
+  flex-shrink: 0;
 }
 
-.hero-mascot {
+.mascot-img-ultra {
   width: 100%;
   height: 100%;
   border-radius: 50%;
   object-fit: cover;
-  border: 3px solid white;
-  box-shadow: 0 12px 28px rgba(0,0,0,0.12);
+  border: 2px solid white;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.08);
   position: relative;
   z-index: 2;
 }
 
-.pulse-ring {
+.halo-ring {
   position: absolute;
-  inset: -4px;
+  inset: -5px;
   border-radius: 50%;
-  background: #06C755;
-  opacity: 0.2;
-  animation: pulseRing 2s infinite;
+  background: linear-gradient(135deg, #00C300, #4caf50);
+  opacity: 0.15;
+  animation: pulseHalo 2.5s infinite;
   z-index: 1;
 }
-
-@keyframes pulseRing {
-  0% { transform: scale(0.9); opacity: 0.5; }
-  100% { transform: scale(1.4); opacity: 0; }
+@keyframes pulseHalo {
+  0% { transform: scale(0.9); opacity: 0.3; }
+  100% { transform: scale(1.3); opacity: 0; }
 }
 
-.hero-title {
-  font-size: 2rem;
+.header-text-group {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.eyebrow-ultra {
+  font-size: 0.9rem;
+  font-weight: 800;
+  color: #1b5e20;
+  letter-spacing: 0.05em;
+  margin-bottom: 0.2rem;
+}
+
+.title-ultra {
+  font-size: 1.6rem;
   font-weight: 900;
   color: #1A1A1A;
   margin: 0;
-  letter-spacing: 0.08em;
+  letter-spacing: 0.05em;
+  line-height: 1.1;
   background: linear-gradient(135deg, #1A1A1A 0%, #2e7d32 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  filter: drop-shadow(0px 2px 4px rgba(0,0,0,0.05));
 }
 
-/* メッセージカード：大きく、読みやすく */
-.message-card {
+/* メッセージカード（圧倒的クオリティ） */
+.message-card-ultra {
   background: #FFFFFF;
-  border-radius: 24px;
-  padding: 1.8rem 1.5rem;
-  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.04), 0 2px 8px rgba(0, 0, 0, 0.02);
+  border-radius: 28px;
+  padding: 1.8rem;
+  box-shadow: 
+    0 20px 40px rgba(0, 0, 0, 0.05), 
+    0 1px 3px rgba(0, 0, 0, 0.02);
   text-align: left;
-  position: relative;
+  border: 1px solid rgba(0,0,0,0.02);
 }
 
-/* メッセージカード内バッジ（カード上部にめり込むデザイン） */
-.card-badge-wrapper {
-  text-align: center;
-  margin-top: -42px; /* カードの上部にはみ出させる */
-  margin-bottom: 1.2rem;
-  position: relative;
-  z-index: 3;
-}
-
-.eyebrow-badge {
-  font-size: 0.75rem;
-  font-weight: 800;
-  color: #FFFFFF;
-  background: #06C755;
-  padding: 0.4rem 1.2rem;
-  border-radius: 20px;
-  letter-spacing: 0.05em;
-  box-shadow: 0 4px 12px rgba(6, 199, 85, 0.3);
-  display: inline-block;
-  border: 2px solid white;
-}
-
-.message-card p {
-  font-size: 1.05rem; /* テキストサイズを拡大して視認性を劇的に向上 */
-  color: #2C3E50;
-  line-height: 1.65;
+.message-card-ultra p {
+  font-size: 1.05rem;
+  color: #334155;
+  line-height: 1.7;
   margin-bottom: 1rem;
 }
 
-.greeting {
-  font-size: 1.2rem !important;
+.greeting-ultra {
+  font-size: 1.3rem !important;
   font-weight: 800;
-  color: #1A1A1A !important;
+  color: #0F172A !important;
   margin-bottom: 0.8rem !important;
 }
 
-.feature-box {
+/* フィーチャーボックス（さらに洗練） */
+.feature-box-ultra {
   background: #F8FAFC;
-  border-radius: 16px;
-  padding: 1.2rem;
-  margin-top: 1.2rem;
-  border: 1px solid #E2E8F0;
+  border-radius: 20px;
+  padding: 1.2rem 1.2rem 1.2rem 3.5rem;
+  margin-top: 1.5rem;
   position: relative;
+  box-shadow: inset 0 2px 4px rgba(0,0,0,0.02);
 }
 
-.feature-box::before {
-  content: '💡';
+.feature-icon {
   position: absolute;
-  top: -12px;
-  left: 16px;
+  top: 1.2rem;
+  left: 1rem;
   font-size: 1.5rem;
-  background: white;
-  border-radius: 50%;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
 }
 
-.feature-box p {
-  font-size: 1rem;
+.feature-box-ultra p {
+  font-size: 0.95rem;
   margin-bottom: 0;
-  color: #334155;
-  font-weight: 500;
+  color: #475569;
+  font-weight: 600;
+  line-height: 1.6;
 }
 
-.highlight-premium {
-  color: #059669;
-  font-weight: 800;
-  background: linear-gradient(transparent 60%, #A7F3D0 60%);
-  padding: 0 0.2rem;
-  box-decoration-break: clone;
-  -webkit-box-decoration-break: clone;
+/* 究極のテキストハイライト（アンダーラインや枠線の完全撤廃） */
+.highlight-ultra {
+  display: inline;
+  font-weight: 900;
+  /* 文字そのものを美しい緑のグラデーションにする */
+  background: linear-gradient(135deg, #00C300 0%, #007E33 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  padding: 0 0.1rem;
+  /* ぼんやりとした後光（グロウ）エフェクト */
+  filter: drop-shadow(0px 2px 4px rgba(0, 195, 0, 0.25));
 }
 
 /* アクションエリア */
-.action-area {
+.action-area-ultra {
   text-align: center;
-  margin-top: 0.5rem;
-  padding-bottom: 2rem;
+  padding-bottom: 1rem;
 }
 
-/* 最強のボタン（LINE基準） */
-.btn-premium {
-  width: 100%;
-  background: #06C755; /* LINE Official Green */
+/* ボタン（最高到達点） */
+.btn-ultra {
+  width: auto;
+  max-width: 96%;
+  margin: 0 auto;
+  background: #06C755;
   color: #FFFFFF;
   border: none;
   border-radius: 100px;
-  padding: 1.1rem 2rem;
+  padding: 1.2rem 2.2rem;
   font-size: 1.2rem;
   font-weight: 800;
-  display: flex;
+  display: inline-flex;
   align-items: center;
   justify-content: center;
-  gap: 0.5rem;
-  box-shadow: 0 8px 24px rgba(6, 199, 85, 0.3), inset 0 -2px 0 rgba(0,0,0,0.1);
+  gap: 0.6rem;
+  box-shadow: 
+    0 10px 25px rgba(6, 199, 85, 0.35), 
+    inset 0 2px 0 rgba(255,255,255,0.2);
   cursor: pointer;
   transition: all 0.3s cubic-bezier(0.2, 0.8, 0.2, 1);
-  -webkit-tap-highlight-color: transparent;
+  white-space: nowrap;
 }
 
-/* 高さの完全なアライメントのための調整 */
-.btn-premium .btn-text {
-  line-height: 1; /* 高さを文字サイズに厳密に合わせる */
-  transform: translateY(1px); /* 日本語フォント特有のベースラインずれを完璧に補正 */
+.btn-ultra .btn-text {
+  line-height: 1;
+  transform: translateY(1px); /* 日本語フォントのベースライン完全補正 */
 }
 
-.btn-premium .btn-icon {
-  width: 22px;
-  height: 22px;
-  display: block; /* Flexアイテム内で高さを安定させる */
+.btn-ultra .btn-icon {
+  width: 24px;
+  height: 24px;
+  display: block;
   transition: transform 0.3s;
 }
 
-.btn-premium:active {
+.btn-ultra:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 14px 30px rgba(6, 199, 85, 0.4);
+}
+.btn-ultra:hover .btn-icon {
+  transform: translateX(5px);
+}
+.btn-ultra:active {
   transform: scale(0.96);
   box-shadow: 0 4px 12px rgba(6, 199, 85, 0.2);
-}
-
-.btn-premium:hover .btn-icon {
-  transform: translateX(4px);
 }
 
 /* ===== Disclaimer Screen ===== */

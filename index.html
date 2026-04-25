@@ -17,35 +17,40 @@
 <body>
   <!-- ===== ウェルカム画面 ===== -->
   <div id="screen-welcome" class="screen active premium-welcome">
-    <!-- プレミアム背景 -->
+    <!-- プレミアムメッシュ背景 + 動的オーラ -->
     <div class="mesh-bg"></div>
+    <div class="ambient-glow g1"></div>
+    <div class="ambient-glow g2"></div>
     
     <div class="welcome-container">
-      <!-- アプリヒーローエリア（中央配置・ネイティブアプリの風格） -->
-      <div class="app-hero">
-        <div class="hero-mascot-wrapper">
-          <div class="pulse-ring"></div>
-          <img src="assets/tasuke-icon.png" alt="タスケくん" class="hero-mascot">
+      
+      <!-- 究極のグラスモーフィズム・ヘッダー（水平配置の復権と進化） -->
+      <div class="glass-header">
+        <div class="header-mascot">
+          <img src="assets/tasuke-icon.png" alt="タスケくん" class="mascot-img-ultra">
+          <div class="halo-ring"></div>
         </div>
-        <h1 class="hero-title">タスケくん</h1>
+        <div class="header-text-group">
+          <span class="eyebrow-ultra">はじめての相続相談</span>
+          <h1 class="title-ultra">タスケくん</h1>
+        </div>
       </div>
 
-      <!-- メッセージエリア（文字を大きく、視認性最高に） -->
-      <div class="message-card">
-        <div class="card-badge-wrapper">
-          <span class="eyebrow-badge">はじめての相続相談</span>
-        </div>
-        <p class="greeting">こんにちは！タスケくんだよ。</p>
+      <!-- メッセージエリア（高品位カード・文字サイズ大幅アップ） -->
+      <div class="message-card-ultra">
+        <p class="greeting-ultra">こんにちは！タスケくんだよ。</p>
         <p>相続のことって、よく分からないし、専門家に相談するのもハードルが高いよね。</p>
         <p>ここでは、よくある悩みや疑問について、僕が分かりやすくお答えするよ！</p>
-        <div class="feature-box">
-          <p>『うちの場合は？』『もっと詳しく！』って思ったら、<br><span class="highlight-premium">上位版の「LINEタスケくん」に切り替えて詳しい相談</span>ができるからね。</p>
+        
+        <div class="feature-box-ultra">
+          <div class="feature-icon">✨</div>
+          <p>『うちの場合は？』と思ったら、<br><span class="highlight-ultra">上位版の「LINEタスケくん」に切り替えて詳しい相談</span>ができるからね。</p>
         </div>
       </div>
 
-      <!-- アクションエリア（最高のボタンと完璧な文字揃え） -->
-      <div class="action-area">
-        <button class="btn-premium" id="btn-start">
+      <!-- アクションエリア（最高到達点のボタン） -->
+      <div class="action-area-ultra">
+        <button class="btn-ultra" id="btn-start">
           <span class="btn-text">相談をはじめる</span>
           <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
             <polyline points="9 18 15 12 9 6"></polyline>
