@@ -1023,3 +1023,29 @@ body {
   background: rgba(255,255,255,0.3);
   border-radius: 2px;
 }
+
+/* ===== 文字サイズ変更 ===== */
+body.font-small {
+  --font-size-base: 12.5px;
+}
+body.font-medium {
+  --font-size-base: 14.5px;
+}
+body.font-large {
+  --font-size-base: 17px;
+}
+body.font-xlarge {
+  --font-size-base: 20px;
+}
+
+.message-bubble,
+.message-bubble .bubble-body,
+.choices-desc,
+.btn-choice,
+.font-preview {
+  font-size: var(--font-size-base);
+}
+
+.message-bubble strong {
+  font-size: calc(var(--font-size-base) * 1.05);
+}

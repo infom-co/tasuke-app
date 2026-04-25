@@ -193,7 +193,7 @@
     // 説明テキスト
     const desc = document.createElement('div');
     desc.className = 'choices-desc';
-    desc.textContent = '当てはまるものがなければ、メッセージで教えてね。';
+    desc.textContent = '気になるものを選んでね。';
     choicesArea.appendChild(desc);
     choices.forEach((choice, idx) => {
       const btn = document.createElement('button');
