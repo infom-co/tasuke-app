@@ -1,17 +1,19 @@
 <!DOCTYPE html>
 <html lang="ja">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
   <meta name="description" content="相続の悩みをタスケくんと一緒に整理。何から始めればいいか、期限はいつか、費用はどれくらいか。初めての相続でも安心のナビゲーター。">
   <meta name="theme-color" content="#2C3E50">
-  <title>タスケくん - 相続事前相談ナビ</title>
+  <title>はじめての相続相談 タスケくん</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
   <link rel="manifest" href="manifest.json">
 </head>
+
 <body>
   <!-- ===== ウェルカム画面 ===== -->
   <div id="screen-welcome" class="screen active">
@@ -26,13 +28,14 @@
           <span class="sparkle s3">✨</span>
         </div>
       </div>
-      <h1 class="welcome-title">タスケくん</h1>
-      <p class="welcome-subtitle">相続事前相談ナビ</p>
-      <p class="welcome-sandbox">
-        🐻 このアプリは、個人情報を一切入れずに<br>
-        何度でもやり直せる「練習帳」だよ。<br>
-        間違えても大丈夫だから、<br>
-        気になるボタンは安心して全部押してみてね！
+      <h1 class="welcome-title" style="font-size: 1.5rem; margin-bottom: 0.2rem;">はじめての相続相談</h1>
+      <p class="welcome-subtitle" style="font-size: 2.2rem; font-weight: 700; margin-top: 0; color: #2C3E50;">タスケくん</p>
+      <p class="welcome-sandbox" style="text-align: left; padding: 0 1rem;">
+        こんにちは！タスケくんだよ。<br><br>
+        相続のことって、何から手をつけていいか分からないし、いきなり専門家に相談するのもハードルが高いよね。<br><br>
+        ここでは、よくある悩みや疑問について、僕が分かりやすくお答えするよ！<br><br>
+        『うちの場合は具体的にいくら税金がかかるの？』『もっと詳しく教えて！』と思ったら、いつでも上位版の「LINEで相続相談できるタスケくん」の方に切り替えて、あなたのご家庭専用の詳しい相談ができるから安心してね。<br><br>
+        <span style="font-weight: bold; color: #E53935;">それじゃあ、下の「はじめる」ボタンを押して、さっそく相談をスタートしよう！</span>
       </p>
       <button class="btn-primary btn-start" id="btn-start">はじめる</button>
     </div>
@@ -41,13 +44,23 @@
   <!-- ===== 免責事項画面 ===== -->
   <div id="screen-disclaimer" class="screen">
     <div class="disclaimer-container">
-      <div class="disclaimer-icon">ℹ️</div>
-      <h2 class="disclaimer-title">タスケくんについて</h2>
-      <div class="disclaimer-text">
-        <p>タスケくんは、相続について「まず何を知っておくべきか」「どう進めればいいか」を一緒に確認していくナビゲーターです。</p>
-        <p>実際の書類作成や申告が必要になった時は、あなたの状況に合った専門家の選び方もタスケくんがお伝えします。</p>
+      <div class="disclaimer-icon">🤝</div>
+      <h2 class="disclaimer-title">タスケくんとの「３つのお約束」</h2>
+      <div class="disclaimer-text" style="text-align: left;">
+        <p>タスケくんは、あなたに寄り添うナビゲーターとして、以下のことをお約束します。</p>
+        <ul style="padding-left: 1.5rem; margin-bottom: 1rem;">
+          <li style="margin-bottom: 0.5rem;"><strong>① 専門用語はわかりやすく解説します</strong><br>難しい言葉が出てきても、誰にでもわかる言葉で丁寧に説明します。</li>
+          <li style="margin-bottom: 0.5rem;"><strong>② 専門家への「丸投げ」はしません</strong><br>不安を煽って特定の専門家を紹介し、紹介料をとるようなことは絶対にしません。
+          </li>
+          <li><strong>③ あなた専用の個別相談ができます</strong><br>上位版の「LINEで相続相談できるタスケくん」に切り替えれば、あなたの具体的な悩みを直接メッセージで相談することができます。</li>
+        </ul>
+        <div
+          style="font-size: 0.8rem; color: #666; margin-top: 1.5rem; padding: 1rem; background: #f9f9f9; border-radius: 8px;">
+          <strong>※タスケくんのサポート範囲について</strong><br>
+          タスケくんは、あなたが後悔しない選択ができるよう全力でサポートします。なお、日本の法令（弁護士法・税理士法）により、実際の税務申告の代行や法的トラブルの代理交渉は、国家資格を持つ専門家しか行ってはいけないと決められています。<br>そのため、タスケくんが直接それらを代行することはできませんが、あなたが自信を持って正しい判断を下せるよう、必要な知識や手順を最後までしっかりとお伝えしていきます。
+        </div>
       </div>
-      <button class="btn-primary" id="btn-disclaimer-ok">わかりました、始めましょう！</button>
+      <button class="btn-primary" id="btn-disclaimer-ok">同意して、相談をスタート！</button>
     </div>
   </div>
 
@@ -132,6 +145,7 @@
 
   <script src="scenarios.js"></script>
   <script src="app.js"></script>
-  <script>if('serviceWorker' in navigator){navigator.serviceWorker.register('sw.js');}</script>
+  <script>if ('serviceWorker' in navigator) { navigator.serviceWorker.register('sw.js'); }</script>
 </body>
+
 </html>
