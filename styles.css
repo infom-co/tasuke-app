@@ -202,17 +202,24 @@ body {
 .welcome-sandbox {
   background: rgba(255, 255, 255, 0.85);
   border-radius: 20px;
-  padding: 0.8rem 1rem; /* パディングを半減 */
+  padding: 0.8rem 1rem;
   font-size: 0.95rem;
   color: #333333;
-  line-height: 1.4; /* 行間を縮小して高さを抑える */
-  margin-bottom: 1rem; /* ボタンとの隙間を縮小 */
+  line-height: 1.4;
+  margin-bottom: 1rem;
   box-shadow: 
     0 15px 30px rgba(0, 0, 0, 0.05),
     inset 0 1px 0 rgba(255, 255, 255, 1);
   backdrop-filter: blur(15px);
   -webkit-backdrop-filter: blur(15px);
   border: 1px solid rgba(255, 255, 255, 0.6);
+  text-align: left;
+}
+.welcome-sandbox p {
+  margin-bottom: 0.6rem; /* <br><br>の代わりとなる、計算された最小限の余白 */
+}
+.welcome-sandbox p.mb-0 {
+  margin-bottom: 0;
 }
 
 /* 蛍光ペンでも赤字でもない、上品な文字ハイライト */
@@ -228,13 +235,14 @@ body {
 
 /* 思わず押したくなる最強のCTAボタン */
 .btn-start {
-  width: 85%; /* テキストボックスに合わせて広がらないように縮小 */
-  margin: 0 auto; /* 中央寄せ */
+  width: auto; /* コンテンツに合わせてフィットさせることで段落ちを完全防止 */
+  max-width: 96%; /* ただし画面ははみ出さない */
+  margin: 0 auto;
   background: linear-gradient(135deg, #00C300 0%, #009900 100%);
   color: white;
   font-size: 1.1rem;
   font-weight: 800;
-  padding: 1rem;
+  padding: 1rem 1.8rem;
   border-radius: 100px;
   border: none;
   box-shadow: 
@@ -242,26 +250,22 @@ body {
     inset 0 2px 0 rgba(255, 255, 255, 0.2);
   cursor: pointer;
   transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
-  display: flex;
+  display: inline-flex;
   align-items: center;
   justify-content: center;
-  gap: 0.3rem;
-  line-height: 1;
+  gap: 0.5rem;
   white-space: nowrap; /* テキストの折り返しによる矢印の段落ちを強制防止 */
-  flex-wrap: nowrap;
 }
-.btn-start::after {
-  content: '→';
-  font-size: 1.1em;
-  display: flex;
-  align-items: center;
+.btn-start .btn-arrow {
+  width: 20px;
+  height: 20px;
   transition: transform 0.3s;
 }
 .btn-start:hover {
   transform: translateY(-2px);
   box-shadow: 0 12px 25px rgba(0, 195, 0, 0.3);
 }
-.btn-start:hover::after {
+.btn-start:hover .btn-arrow {
   transform: translateX(4px);
 }
 .btn-start:active {
