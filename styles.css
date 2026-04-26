@@ -121,12 +121,17 @@ body {
   margin: 0 auto;
   display: flex;
   flex-direction: column;
-  gap: 1.2rem;
-  padding: 5vh 0 2rem 0; /* margin:autoによる見切れバグを防止 */
+  gap: 0.8rem; /* 縦幅の大幅節約 */
+  padding: 3vh 0 1rem 0; /* 上のパディングを削る */
   animation: fadeInUp 0.8s cubic-bezier(0.2, 0.8, 0.2, 1);
 }
 
 /* --- アプリヒーロー（信頼と格式） --- */
+.header-fintech {
+  text-align: center;
+  margin-bottom: 0.2rem; /* 縦幅の節約 */
+}
+
 .app-hero-premium {
   display: flex;
   flex-direction: column;
@@ -212,10 +217,29 @@ body {
   margin-bottom: 1.5rem;
 }
 
+.fit-line {
+  display: inline-block;
+  white-space: nowrap;
+  letter-spacing: -0.03em; /* 1行に収めるための微調整 */
+}
+
 .app-version-text {
   border-bottom: 1px dashed #CBD5E1;
-  padding-bottom: 1rem;
-  margin-bottom: 1.2rem;
+  padding-bottom: 0.8rem;
+  margin-bottom: 1rem;
+}
+
+.badge-app {
+  display: inline-block;
+  background: #334155; /* ダークスレートで強烈なコントラスト */
+  color: #FFFFFF;
+  font-size: 0.85rem;
+  font-weight: 800;
+  padding: 0.2rem 0.6rem;
+  border-radius: 4px;
+  vertical-align: middle;
+  margin-right: 0.3rem;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
 /* --- 最大のフック：アップセル --- */
@@ -231,9 +255,10 @@ body {
   font-size: 0.85rem;
   font-weight: 700;
   color: #334155;
-  margin-bottom: 0.8rem;
+  margin-bottom: 0.6rem;
   line-height: 1.4;
   white-space: nowrap; /* 強制的に1行にする */
+  letter-spacing: -0.02em; /* 収まりやすく */
 }
 
 /* 上位版ブランドの絶対的な強調 */
@@ -242,29 +267,30 @@ body {
   align-items: center;
   flex-wrap: nowrap; /* 1行に固定 */
   gap: 0.4rem;
-  margin-bottom: 1rem;
+  margin-bottom: 0.8rem;
   background: linear-gradient(135deg, #F0FDF4 0%, #DCFCE7 100%);
-  padding: 0.8rem 0.6rem; /* パディングを削る */
+  padding: 0.6rem 0.4rem; /* パディングを削る */
   border-radius: 8px;
   border-left: 4px solid #06C755;
   white-space: nowrap; /* 折り返し防止 */
 }
 
-.badge-premium {
+.badge-premium-large {
   background: #06C755;
   color: #FFFFFF;
-  font-size: 0.75rem;
-  padding: 0.15rem 0.5rem;
-  border-radius: 4px;
-  font-weight: 800;
+  font-size: 1rem; /* 1.3倍に巨大化 */
+  padding: 0.2rem 0.6rem;
+  border-radius: 6px;
+  font-weight: 900;
+  box-shadow: 0 2px 6px rgba(6, 199, 85, 0.3);
 }
 
 .brand-name-gold {
   margin: 0;
-  font-size: 1.3rem;
+  font-size: 1.25rem;
   font-weight: 900;
   color: #047857;
-  letter-spacing: 0.02em;
+  letter-spacing: 0.01em;
 }
 
 .text-nara {
