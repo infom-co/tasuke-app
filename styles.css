@@ -190,7 +190,7 @@ body {
   -webkit-backdrop-filter: blur(20px);
   border: 1px solid rgba(255,255,255,1);
   border-radius: 24px;
-  padding: 1.5rem 1.2rem;
+  padding: 1.2rem 0.8rem; /* パディングを削って横幅を最大化 */
   box-shadow: 
     0 20px 40px -10px rgba(0,0,0,0.05),
     inset 0 1px 0 rgba(255,255,255,0.6);
@@ -212,60 +212,42 @@ body {
   margin-bottom: 1.5rem;
 }
 
-/* --- アプリ版の説明エリア --- */
-.app-version-info {
-  margin-bottom: 1.5rem;
-  padding-bottom: 1.2rem;
+.app-version-text {
   border-bottom: 1px dashed #CBD5E1;
-}
-.version-badge {
-  display: inline-block;
-  font-size: 0.75rem;
-  font-weight: 800;
-  padding: 0.2rem 0.6rem;
-  border-radius: 4px;
-  margin-bottom: 0.5rem;
-}
-.version-badge.gray {
-  background: #F1F5F9;
-  color: #64748B;
-  border: 1px solid #E2E8F0;
-}
-.value-card .sub-text {
-  font-size: 0.95rem;
-  color: #475569;
-  line-height: 1.6;
-  margin: 0;
+  padding-bottom: 1rem;
+  margin-bottom: 1.2rem;
 }
 
 /* --- 最大のフック：アップセル --- */
 .upsell-box {
   background: #F8FAFC;
   border-radius: 12px;
-  padding: 1.2rem;
+  padding: 1rem 0.6rem; /* 横の余白をさらに削る */
   border: 1px solid #E2E8F0;
   text-align: left;
 }
 
 .upsell-catch {
-  font-size: 0.9rem;
+  font-size: 0.85rem;
   font-weight: 700;
   color: #334155;
-  margin-bottom: 1rem;
+  margin-bottom: 0.8rem;
   line-height: 1.4;
+  white-space: nowrap; /* 強制的に1行にする */
 }
 
 /* 上位版ブランドの絶対的な強調 */
 .premium-brand-reveal {
   display: flex;
   align-items: center;
-  flex-wrap: wrap;
-  gap: 0.5rem;
+  flex-wrap: nowrap; /* 1行に固定 */
+  gap: 0.4rem;
   margin-bottom: 1rem;
   background: linear-gradient(135deg, #F0FDF4 0%, #DCFCE7 100%);
-  padding: 0.8rem 1rem;
+  padding: 0.8rem 0.6rem; /* パディングを削る */
   border-radius: 8px;
   border-left: 4px solid #06C755;
+  white-space: nowrap; /* 折り返し防止 */
 }
 
 .badge-premium {
@@ -279,7 +261,7 @@ body {
 
 .brand-name-gold {
   margin: 0;
-  font-size: 1.35rem;
+  font-size: 1.3rem;
   font-weight: 900;
   color: #047857;
   letter-spacing: 0.02em;
@@ -289,7 +271,7 @@ body {
   font-size: 0.95rem;
   font-weight: 700;
   color: #166534;
-  margin-left: 0.2rem;
+  margin-left: 0.1rem;
 }
 
 /* ベネフィットテキスト */
