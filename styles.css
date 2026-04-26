@@ -212,66 +212,96 @@ body {
   margin-bottom: 1.5rem;
 }
 
-/* --- 最大のフック：アップセル（前回ベースの最高峰仕上げ） --- */
+/* --- アプリ版の説明エリア --- */
+.app-version-info {
+  margin-bottom: 1.5rem;
+  padding-bottom: 1.2rem;
+  border-bottom: 1px dashed #CBD5E1;
+}
+.version-badge {
+  display: inline-block;
+  font-size: 0.75rem;
+  font-weight: 800;
+  padding: 0.2rem 0.6rem;
+  border-radius: 4px;
+  margin-bottom: 0.5rem;
+}
+.version-badge.gray {
+  background: #F1F5F9;
+  color: #64748B;
+  border: 1px solid #E2E8F0;
+}
+.value-card .sub-text {
+  font-size: 0.95rem;
+  color: #475569;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* --- 最大のフック：アップセル --- */
 .upsell-box {
-  background: linear-gradient(145deg, #F0FDF4 0%, #DCFCE7 100%);
-  border-radius: 16px;
-  padding: 1.2rem 1.2rem;
-  border: 1px solid rgba(34, 197, 94, 0.3);
-  box-shadow: inset 0 2px 10px rgba(255,255,255,0.6), 0 4px 10px rgba(0,0,0,0.03);
-  text-align: left; /* 読みやすさ重視の左揃え */
+  background: #F8FAFC;
+  border-radius: 12px;
+  padding: 1.2rem;
+  border: 1px solid #E2E8F0;
+  text-align: left;
 }
 
 .upsell-catch {
-  font-size: 0.85rem;
+  font-size: 0.9rem;
   font-weight: 700;
-  color: #166534;
-  margin-bottom: 0.6rem;
+  color: #334155;
+  margin-bottom: 1rem;
+  line-height: 1.4;
+}
+
+/* 上位版ブランドの絶対的な強調 */
+.premium-brand-reveal {
   display: flex;
   align-items: center;
-}
-.upsell-catch::before {
-  content: '💡';
-  margin-right: 0.3rem;
-  font-size: 1rem;
-}
-
-.upsell-highlight {
-  margin: 0;
-  line-height: 1.5;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+  background: linear-gradient(135deg, #F0FDF4 0%, #DCFCE7 100%);
+  padding: 0.8rem 1rem;
+  border-radius: 8px;
+  border-left: 4px solid #06C755;
 }
 
-.badge-inline {
-  background: #059669;
-  color: white;
-  font-size: 0.7rem;
-  padding: 0.15rem 0.4rem;
+.badge-premium {
+  background: #06C755;
+  color: #FFFFFF;
+  font-size: 0.75rem;
+  padding: 0.15rem 0.5rem;
   border-radius: 4px;
   font-weight: 800;
-  vertical-align: middle;
-  margin-right: 0.3rem;
 }
 
-.brand-inline {
-  font-size: 1.25rem;
+.brand-name-gold {
+  margin: 0;
+  font-size: 1.35rem;
   font-weight: 900;
   color: #047857;
-  vertical-align: middle;
   letter-spacing: 0.02em;
 }
 
+.text-nara {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: #166534;
+  margin-left: 0.2rem;
+}
+
+/* ベネフィットテキスト */
 .benefit-text {
   display: block;
   font-size: 0.95rem;
   color: #1F2937;
-  margin-top: 0.6rem;
-  padding-left: 0.2rem;
   line-height: 1.6;
 }
 .benefit-text strong {
   font-size: 1.1rem;
   font-weight: 900;
-  /* 重要な文字だけを美しいグラデーションで発光させる */
   background: linear-gradient(135deg, #00C300 0%, #007E33 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
