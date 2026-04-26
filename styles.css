@@ -78,6 +78,8 @@ body {
   position: relative;
   overflow-y: auto;
   overflow-x: hidden;
+}
+.ultimate-fintech-welcome.active {
   display: flex;
   flex-direction: column;
 }
@@ -238,7 +240,7 @@ body {
   padding: 0.2rem 0.5rem;
   border-radius: 4px;
   vertical-align: middle;
-  transform: translateY(-1px); /* バッジが下がるのを補正してテキストと完璧に揃える */
+  transform: translateY(-2px); /* バッジが下がるのを補正してテキストと完璧に揃える（さらに1px上昇） */
   margin-right: 0.1rem;
   box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
